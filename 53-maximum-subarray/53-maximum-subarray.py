@@ -5,9 +5,8 @@ class Solution(object):
         :rtype: int
         """
         le = len(nums)
-        mss = nums[0]
-        ss = [mss]
+        mss = prev = nums[0]
         for i in range(1, le):
-            ss.append(max(ss[i-1]+nums[i], nums[i]))
-            mss = max(ss[i], mss)
+            prev = max(prev+nums[i], nums[i])
+            mss = max(prev, mss)
         return mss
