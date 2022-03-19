@@ -11,13 +11,13 @@ class Solution {
             if ((prices[i]<=prices[i-1])&&(prices[i]<prices[i+1])) {
                 cp = prices[i];
                 hold = true;
-                System.out.println("Buy on "+i+" day at "+cp);
+                //System.out.println("Buy on "+i+" day at "+cp);
             }
             else if ((prices[i]>prices[i-1])&&(prices[i]>=prices[i+1])) {
                 sp = prices[i];
                 maxProfit+=sp-cp;
                 hold = false;
-                System.out.println("Sell on "+i+" day at "+sp);
+                //System.out.println("Sell on "+i+" day at "+sp);
             }
         }
         if (prices[i]>prices[i-1])
