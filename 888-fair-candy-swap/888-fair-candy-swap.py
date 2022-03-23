@@ -2,10 +2,10 @@ class Solution:
     def fairCandySwap(self, aliceSizes: List[int], bobSizes: List[int]) -> List[int]:
         aSum = sum(aliceSizes)
         bSum = sum(bobSizes)
-        # asL = sorted(list(set(aliceSizes)))
-        # bsL = sorted(list(set(bobSizes)))
-        asL = sorted(aliceSizes)
-        bsL = sorted(bobSizes)
+        asL = sorted(list(set(aliceSizes)))
+        bsL = sorted(list(set(bobSizes)))
+        # asL = sorted(aliceSizes)
+        # bsL = sorted(bobSizes)
         an, bn = len(asL), len(bsL)
         ap = bp = 0
         while(ap<an and bp<bn):
