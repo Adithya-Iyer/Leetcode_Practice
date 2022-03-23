@@ -1,6 +1,10 @@
 class Solution:
     def maxProduct(self, nums: List[int]) -> int:
-        nums.sort()
+        maxHeap = []
         ln = len(nums)
-        ret = (nums[ln-1]-1)*(nums[ln-2]-1)
+        for i in range(ln):
+            heappush(maxHeap,-nums[i])
+        ret = 1
+        for i in range(2):
+            ret*=heappop(maxHeap)+1
         return ret
