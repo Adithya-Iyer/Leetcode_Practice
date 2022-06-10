@@ -14,7 +14,14 @@ class Solution:
         battleships = 0
         for x in range(m):
             for y in range(n):
+                #DFS Solution
                 if board[x][y]=='X':
                     battleships+=1
                     dfsX(x,y)
+                #Optimal Solution
+                if board[x][y]=='.':
+                    continue
+                if (x>0 and board[x-1][y]=='X') or (y>0 and board[x][y-1]=='X'):
+                    continue
+                battleships+=1
         return battleships
