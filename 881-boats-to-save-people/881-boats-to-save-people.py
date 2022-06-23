@@ -6,8 +6,6 @@ class Solution:
         i, j = 0, p-1
         while (i<=j):
             boats +=1
-            if i==j:
-                break
             if people[i]+people[j] <= limit:
                 i, j = i+1, j-1
             else:
